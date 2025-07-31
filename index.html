@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revive India – A Cultural Revival Initiative</title>
+  <style>
+    body {
+      margin: 0;
+      background: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      font-weight: bold;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: linear-gradient(to right, #c0392b, #2980b9);
+      color: white;
+      padding: 2em 1em;
+      text-align: center;
+      position: relative;
+      clip-path: ellipse(100% 80% at 50% 20%);
+    }
+
+    header img {
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    nav {
+      background: #e74c3c;
+      text-align: center;
+      padding: 1em;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1em;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffd;
+    }
+
+    section {
+      padding: 2em;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: #f0f8ff;
+      border-left: 5px solid #c0392b;
+      margin: 1em 0;
+      padding: 1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      background: #dff0ff;
+    }
+
+    .extra {
+      display: none;
+      margin-top: 0.5em;
+    }
+
+    .card.active .extra {
+      display: block;
+    }
+
+    .funny {
+      font-style: italic;
+      color: #2980b9;
+      margin: 1em 0;
+    }
+
+    .initiative {
+      border-left: 5px solid #2980b9;
+      background: #f0f8ff;
+      margin: 2em 0;
+      padding: 1em;
+    }
+
+    .initiative img {
+      width: 100%;
+      max-width: 500px;
+      display: block;
+      margin: 0 auto 1em auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1em;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #c0392b;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      margin-top: 2em;
+      clip-path: ellipse(100% 100% at 50% 0%);
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 0.5em 0;
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+      0% { transform: scale(0.9); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes slideInLeft {
+      0% { transform: translateX(-50px); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+
+    section,
+    .gallery img,
+    .initiative img,
+    .card {
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+
+    section { animation: fadeInUp 1s ease forwards; }
+    .card { animation: slideInLeft 1s ease forwards; }
+    .initiative img { animation: zoomIn 0.8s ease forwards; }
+    .gallery img { animation: zoomIn 0.6s ease forwards; }
+
+    section:nth-of-type(1) { animation-delay: 0.2s; }
+    section:nth-of-type(2) { animation-delay: 0.4s; }
+    section:nth-of-type(3) { animation-delay: 0.6s; }
+    section:nth-of-type(4) { animation-delay: 0.8s; }
+    section:nth-of-type(5) { animation-delay: 1s; }
+    section:nth-of-type(6) { animation-delay: 1.2s; }
+
+    .attire-block {
+      margin-bottom: 2em;
+      background: #f9f9f9;
+      padding: 1em;
+      border-left: 5px solid #2980b9;
+      border-radius: 10px;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .attire-block h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+<header id="home">
+  <img src="RILogo.png" alt="Revive India Logo" style="height: 100px; margin-bottom: 10px;" />
+  <h1>Revive India</h1>
+  <p>Bringing India's Lost Culture Back to Life</p>
+</header>
+
+<nav>
+  <a href="#team">Team</a>
+  <a href="#impact">Impact</a>
+  <a href="#initiatives">Initiatives</a>
+  <a href="#attire">Traditional Attire</a>
+  <a href="#gallery">Gallery</a>
+</nav>
+
+<section class="funny">
+  <p>We’re not just reviving culture — we’re basically cultural archaeologists… with Wi-Fi!</p>
+  <p>Who needs Netflix when you’ve got Natyashastra and puppets?</p>
+  <p>Scroll less, soul more. 🧘♀️ #CultureIsCool</p>
+  <p>Our Diya sets are so lit… literally.</p>
+  <p>Ancient meets awesome. Warning: You may fall in love with India all over again.</p>
+</section>
+
+<section id="team">
+  <h2>Meet the Team</h2>
+  <div class="card" onclick="this.classList.toggle('active')">Sidra Choudhary – Narrator / Host<div class="extra">Introduced Revive India with passion and pride, set the tone for cultural revival.</div></div>
+  <div class="card" onclick="this.classList.toggle('active')">Raghav Pandey – Research Head<div class="extra">Led documentation of 40+ forgotten traditions from real-life sources.</div></div>
+  <div class="card" onclick="this.classList.toggle('active')">Sachi Singh – Storyteller<div class="extra">Created 'Echoes of India' stories and Instagram content to revive legends.</div></div>
+  <div class="card" onclick="this.classList.toggle('active')">Vihaan Tiwari – Tech & AI<div class="extra">Developed VedaBot and recreated ancient scenes with AI tools.</div></div>
+  <div class="card" onclick="this.classList.toggle('active')">Saanchi Arora – Marketing & Outreach<div class="extra">Led the #CultureIsCool campaign, created posters, QR codes, and flash mobs.</div></div>
+  <div class="card" onclick="this.classList.toggle('active')">Vriddhi Kanodia – Finance Head<div class="extra">Handled funding through donations, workshops, and cultural subscription boxes.</div></div>
+  <div class="card" onclick="this.classList.toggle('active')">Samaira Khanna – Event Coordinator<div class="extra">Organized Lost Culture Week, fashion shows, and hands-on cultural events.</div></div>
+  <div class="card" onclick="this.classList.toggle('active')">Arsh Agarwal – Art & Design Head<div class="extra">Designed traditional-themed products and ran 'Art Meets AI' workshops.</div></div>
+  <div class="card" onclick="this.classList.toggle('active')">Kian Gambir – NGO Liaison<div class="extra">Partnered with KalaSetu Foundation and Voice of Roots for real-world impact.</div></div>
+  <div class="card" onclick="this.classList.toggle('active')">Neil Antil – Salesman<div class="extra">Measured success: ₹58,000 raised, 300+ students taught, 15K+ views.</div></div>
+  <div class="card" onclick="this.classList.toggle('active')">Twisha Srivastava – Team Leader<div class="extra">United the team and closed the journey with a powerful final message.</div></div>
+</section>
+
+<section id="impact">
+  <h2>Our Impact</h2>
+  <p>Raised ₹58,000 for artisans, taught 300+ students, reached 15K viewers online. Built VedaBot AI chatbot, launched a subscription box, and published 12 cultural guides.</p>
+</section>
+
+<section id="initiatives">
+  <h2>Our Initiatives</h2>
+  <div class="initiative">
+    <h3>VedaBot – Ancient AI</h3>
+    <p>Used AI to recreate ancient scripts and answer culture-related questions intelligently.</p>
+  </div>
+  <div class="initiative">
+    <h3>Lost Culture Week</h3>
+    <p>Workshops, puppet shows, DIY diya kits, food fests, and more to bring culture to students.</p>
+  </div>
+</section>
+
+<section id="attire">
+  <h2>Traditional Indian Attire</h2>
+<div class="attire-block">
+  <h3>Kurta-Pajama</h3>
+  <div style="text-align: center;">
+    <img src="kurtapajama.jpeg" alt="Kurta Pajama" style="width: 100px; border-radius: 12px; margin-bottom: 10px;">
+  </div>
+  <p><strong>Description:</strong> Classic white Kurta-Pajama, a timeless ensemble deeply rooted in Indian tradition.</p>
+  <p><strong>Origin:</strong> Worn across North India, Pakistan, and Bangladesh for centuries.</p>
+</div>
+<div class="attire-block">
+    <h3>Angarkha & Dhoti</h3>
+    <div style="text-align: center;">
+    <img src="Angarkha & Dhoti.jpeg" alt="Angarkha & Dhoti" style="width: 100px; border-radius: 12px; margin-bottom: 10px;">
+  </div>
+    <p><strong>Description:</strong> Angarkha-style Kurta with geometric patterns, side-tied flap design.</p>
+    <p><strong>Origin:</strong> Rajasthan & Gujarat – popular among nobility and classical musicians.</p>
+  </div>
+  <div class="attire-block">
+    <h3>Bandhani Saree</h3>
+  <div style="text-align: center;">
+    <img src="Bandhani Saree.jpeg" alt="Bandhani Saree" style="width: 100px; border-radius: 12px; margin-bottom: 10px;">
+  </div>
+    <p><strong>Description:</strong> Green and white tie-dye Bandhani saree with golden embroidery and red border.</p>
+    <p><strong>Origin:</strong> Bandhani (Bandhej) from Gujarat and Rajasthan.</p>
+  </div>
+  <div class="attire-block">
+    <h3>Patiala Salwar with Peplum Top</h3>
+  <div style="text-align: center;">
+    <img src="Patiala Salwar with Peplum Top.jpeg" alt="Patiala Salwar with Peplum Top" style="width: 100px; border-radius: 12px; margin-bottom: 10px;">
+  </div>
+    <p><strong>Description:</strong> Sleeveless floral peplum top with rust-colored Patiala salwar.</p>
+    <p><strong>Origin:</strong> Patiala, Punjab – once royal attire, now a fusion favorite.</p>
+  </div>
+  <div class="attire-block">
+    <h3>Garba Attire</h3>
+    <div style="text-align: center;">
+    <img src="Garba Attire.jpeg" alt="Garba Attire" style="width: 100px; border-radius: 12px; margin-bottom: 10px;">
+  </div>
+    <p><strong>Description:</strong> Lehenga with mirrorwork, elephant motifs, and multicolor checkered sleeves.</p>
+    <p><strong>Origin:</strong> Gujarat – worn during Navratri to honor Goddess Durga.</p>
+  </div>
+  <div class="attire-block">
+    <h3>Chikankari Salwar Kameez</h3>
+  <div style="text-align: center;">
+    <img src="Chikankari Salwar Kameez.jpeg" alt="Chikankari Salwar Kameez" style="width: 100px; border-radius: 12px; margin-bottom: 10px;">
+  </div>
+    <p><strong>Description:</strong> Salwar Kameez with delicate white Chikankari hand embroidery.</p>
+    <p><strong>Origin:</strong> Lucknow – over 200 years old, known for floral shadow work and fine detail.</p>
+  </div>
+  <div class="attire-block">
+    <h3>Zardozi Jacket</h3>
+  <div style="text-align: center;">
+    <img src="Zardozi Jacket.jpeg" alt="Zardozi Jacket" style="width: 100px; border-radius: 12px; margin-bottom: 10px;">
+  </div>
+    <p><strong>Description:</strong> Blue ethnic jacket with intricate Zardozi silver threadwork and red highlights.</p>
+    <p><strong>Origin:</strong> Mughal era craft – originally for royalty using gold, silver, beads, and stones.</p>
+  </div>
+</section>
+<section id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery" style="display: flex; gap: 20px;">
+    <div style="text-align: center;">
+      <img src="Puppet Show Image for website.png" alt="Puppet Show" style="width: 200px; border-radius: 12px;">
+      <p style="margin-top: 0.5em; font-weight: bold;">Puppet Show</p>
+    </div>
+
+    <div style="text-align: center;">
+      <img src="Diya Workshop Image for website.png" alt="Diya Workshop" style="width: 200px; border-radius: 12px;">
+      <p style="margin-top: 0.5em; font-weight: bold;">Diya Workshop</p>
+    </div>
+
+    <div style="text-align: center;">
+      <img src="Traditional Art Image for website.png" alt="Traditional Art" style="width: 200px; border-radius: 12px;">
+      <p style="margin-top: 0.5em; font-weight: bold;">Traditional Art</p>
+    </div>
+
+    <div style="text-align: center;">
+      <img src="Culture Fest Image for website.png" alt="Diwali Culture Fest" style="width: 200px; border-radius: 12px;">
+      <p style="margin-top: 0.5em; font-weight: bold;">Culture Fest</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+ <p>© 2025 Revive India | Created by Grade VI Students</p>
+</footer>
+
+</body>
+</html>
